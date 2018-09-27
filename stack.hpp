@@ -1,17 +1,14 @@
-//
-// Created by Nirajan on 2018-09-27.
-//
 #include <iostream>
 #ifndef LAB3_STACK_HPP
 #define LAB3_STACK_HPP
 
-class stack
+class Stack
 {
 public:
     static constexpr int array_max = 9;
 
     //Constructor for the class
-    stack();
+    Stack();
 
     //Accepts an int and adds it to the top of the stack
     bool push(int newValue);

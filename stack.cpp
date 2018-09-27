@@ -1,12 +1,10 @@
 #include "stack.hpp"
 
-using namespace std;
-
-stack::stack() {
+Stack::Stack() {
     topIndex = -1;
 }
 
-bool stack::push(int newValue){
+bool Stack::push(int newValue){
     if(topIndex == 9) {
         return false;
     } else {
@@ -16,26 +14,26 @@ bool stack::push(int newValue){
     return true;
 }
 
-void stack::pop(){
-    topIndex -= topIndex;
+void Stack::pop(){
+    topIndex = topIndex - 1;
 }
 
-const int stack::top(){
+const int Stack::top(){
     return Array[topIndex];
 }
 
-const bool stack::empty(){
+const bool Stack::empty(){
     return topIndex == -1;
 }
 
-const bool stack::full() {
+const bool Stack::full() {
     return topIndex == 9;
 }
 
-const string stack::print(){
-    string toPrint;
-    for(int i = 0; i <= array_max; i++){
-        toPrint += i + " ";
+const std::string Stack::print(){
+    std::string toPrint;
+    for(int i = 0; i <= topIndex; i++){
+        toPrint += std::to_string(Array[i]);
     }
     return toPrint;
 }
