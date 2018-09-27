@@ -1,5 +1,6 @@
-
 #include "stack.hpp"
+
+using namespace std;
 
 stack::stack() {
     topIndex = -1;
@@ -31,12 +32,14 @@ const bool stack::full() {
     return topIndex == 9;
 }
 
-const void stack::print(){
+const string stack::print(){
+    string toPrint;
     for(int i = 0; i <= array_max; i++){
-        std::cout << i << " ";
+        toPrint += i + " ";
     }
+    return toPrint;
 }
 
-int main() {
-    return 0;
-}
+//int main() {
+//    return 0;
+//}

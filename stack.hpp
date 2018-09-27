@@ -29,7 +29,7 @@ public:
     const bool full();
 
     //Prints the contents of the stack
-    const void print();
+    const std::string print();
 
 private:
     int Array[array_max]{}; //Int array of size 10
