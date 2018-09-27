@@ -2,6 +2,8 @@
 #ifndef LAB3_STACK_HPP
 #define LAB3_STACK_HPP
 
+using namespace std;
+
 class Stack
 {
 public:
@@ -23,10 +25,10 @@ public:
     const bool empty();
 
     //Returns true of the stack is full, false otherwise
-    const bool full();
+    bool full() const;
 
     //Prints the contents of the stack
-    const std::string print();
+    string print();
 
 private:
     int Array[array_max]{}; //Int array of size 10

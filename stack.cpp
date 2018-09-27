@@ -26,16 +26,20 @@ const bool Stack::empty(){
     return topIndex == -1;
 }
 
-const bool Stack::full() {
+bool Stack::full() const{
     return topIndex == 9;
 }
 
-const std::string Stack::print(){
-    std::string toPrint;
-    for(int i = 0; i <= topIndex; i++){
-        toPrint += std::to_string(Array[i]);
+string Stack::print(){
+    string toPrint;
+    cout << " Inside the string function" << endl;
+    for(int i = 0; i < topIndex; i++){
+        toPrint += to_string(Array[i]);
+        cout << Array[i] << endl;
     }
+    cout << toPrint;
     return toPrint;
+
 }
 
 //int main() {

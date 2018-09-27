@@ -61,7 +61,9 @@ TEST_CASE("Full Test", "[Full}") {
     tester.push(7);
     tester.push(8);
     tester.push(9);
+    tester.push(255);
     REQUIRE(tester.full());
+    REQUIRE(tester.top() == 9);
     REQUIRE(!tester.empty());
 }
 
@@ -71,5 +73,9 @@ TEST_CASE("Print Test", "[Print}") {
     Stack tester;
     tester.push(1);
     tester.push(2);
-    REQUIRE(tester.print().compare("12") == 0);
+    tester.push(3);
+    tester.push(4);
+    tester.push(5);
+    tester.push(6);
+    REQUIRE(tester.print() == "123456");
 }
